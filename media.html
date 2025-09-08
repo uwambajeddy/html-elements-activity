@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .media-container {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Media Elements Demo</h1>
+    
+    <div class="media-container">
+        <h2>Audio Player</h2>
+        <audio controls>
+            <source src="sample-audio.mp3" type="audio/mpeg">
+            <source src="sample-audio.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+        <p><em>Note: Replace "sample-audio.mp3" with the path to your actual audio file.</em></p>
+    </div>
+    
+    <div class="media-container">
+        <h2>Video Player with Captions</h2>
+        <video controls width="320">
+            <source src="sample-video.mp4" type="video/mp4">
+            <source src="sample-video.webm" type="video/webm">
+            <track kind="captions" src="captions.vtt" srclang="en" label="English" default>
+            Your browser does not support the video element.
+        </video>
+        <p><em>Note: Replace "sample-video.mp4" with the path to your actual video file, and "captions.vtt" with your captions file.</em></p>
+    </div>
+    
+    <div class="media-container">
+        <h3>Sample VTT Caption File Content:</h3>
+        <pre>
+WEBVTT
+
+00:00.000 --> 00:03.000
+Hello, this is a sample caption.
+
+00:03.000 --> 00:06.000
+This shows how captions work with HTML5 video.
+        </pre>
+        <p><em>Save this content as "captions.vtt" in the same folder as your HTML file.</em></p>
+    </div>
+</body>
+</html>
