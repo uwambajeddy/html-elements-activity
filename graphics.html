@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .graphics-container {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #myCanvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Graphics Elements Demo</h1>
+    
+    <div class="graphics-container">
+        <h2>Image Element</h2>
+        <img src="https://via.placeholder.com/300x200/4CAF50/white?text=Sample+Image" 
+             alt="Sample placeholder image" 
+             width="300" 
+             height="200">
+        <p><em>This uses a placeholder image. Replace with your own local or online image.</em></p>
+    </div>
+    
+    <div class="graphics-container">
+        <h2>Inline SVG Circle</h2>
+        <svg width="200" height="200">
+            <circle cx="100" cy="100" r="80" 
+                    fill="lightblue" 
+                    stroke="navy" 
+                    stroke-width="3" />
+            <text x="100" y="105" 
+                  text-anchor="middle" 
+                  fill="darkblue" 
+                  font-family="Arial" 
+                  font-size="16">SVG Circle</text>
+        </svg>
+    </div>
+    
+    <div class="graphics-container">
+        <h2>Canvas with JavaScript Rectangle</h2>
+        <canvas id="myCanvas" width="300" height="200">
+            Your browser does not support the canvas element.
+        </canvas>
+        <p><em>A rectangle is drawn using JavaScript on this canvas.</em></p>
+    </div>
+
+    <script>
+        // Get the canvas element and its 2D context
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Draw a filled rectangle
+        ctx.fillStyle = '#FF6B6B';
+        ctx.fillRect(50, 50, 200, 100);
+        
+        // Draw a border around the rectangle
+        ctx.strokeStyle = '#4ECDC4';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(50, 50, 200, 100);
+        
+        // Add text on the rectangle
+        ctx.fillStyle = 'white';
+        ctx.font = '20px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText('Canvas Rectangle', 150, 105);
+    </script>
+</body>
+</html>
