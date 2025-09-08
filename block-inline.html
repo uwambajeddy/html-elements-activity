@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block vs Inline Elements</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        .block-div {
+            border: 2px solid blue;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        .block-section {
+            border: 2px solid red;
+            margin: 10px 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Block vs Inline Elements Demo</h1>
+    
+    <!-- Paragraph with inline elements -->
+    <p>This is a paragraph with some text. Here's a <strong>strong word</strong> which is an inline element. 
+    And here's a <span class="highlight">highlighted span</span> with a different background color.</p>
+    
+    <!-- Block elements with borders -->
+    <div class="block-div">
+        This is a div element (block-level). Notice how it takes up the full width and creates a new line.
+    </div>
+    
+    <section class="block-section">
+        This is a section element (also block-level). It also takes up the full width and stacks below the div.
+    </section>
+    
+    <p>Notice how the block elements stack vertically and take up the full width, while the inline elements 
+    (strong and span) flow within the text without breaking the line.</p>
+</body>
+</html>
